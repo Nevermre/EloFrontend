@@ -1,0 +1,29 @@
+<mat-card style="margin-top: 100px;">
+  <mat-card-header>
+    <img mat-card-avatar  src="https://i.ibb.co/7XfSHYM/1628271988782.jpg">
+  </mat-card-header>
+<mat-card-content>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <p>
+    <mat-form-field>
+      <input required minlength="4" type="text" matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input required minlength="3" type="password" matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+  </p>
+
+  <p *ngIf="error" class="error">
+    {{error}}
+  </p>
+
+  <div class="button">
+    <button type="submit" mat-button>Login</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>

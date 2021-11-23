@@ -1,0 +1,51 @@
+<mat-card style="margin-top: 100px;">
+  <mat-card-title>Painel de Leads</mat-card-title>
+  <button routerLink="/home/form" mat-flat-button color="primary">
+    <mat-icon>add</mat-icon>
+    <span class="button-title">Adicionar novo Lead</span>
+  </button>
+
+<mat-card-content>
+<div class="flexbox-parent">
+<div cdkDropListGroup layout="row" layout-align="center center" style="min-height: 500px">
+    <div class="example-container">
+      <h2>Cliente em Potencial</h2>
+  
+      <div id="2"
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item.customername}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>Dados Confirmados</h2>
+  
+      <div
+        id="3"
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.customername}}</div>
+      </div>
+    </div>
+
+    <div class="example-container">
+      <h2>Reunião Agendada</h2>
+  
+      <div
+        id="4"
+        cdkDropList
+        [cdkDropListData]="finished"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of finished" cdkDrag>{{item.customername}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+</mat-card-content>
+</mat-card>

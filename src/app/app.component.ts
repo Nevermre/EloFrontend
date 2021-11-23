@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  login(message : string){
+    console.log("login")
+  }
+
   title = 'frontend';
 }

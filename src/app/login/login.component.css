@@ -1,0 +1,36 @@
+:host {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      body{
+        margin: 0;
+      }
+
+      .mat-form-field {
+        width: 100%;
+        min-width: 300px;
+      }
+      mat-card img{
+        width: 100%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+        height: 50%;
+      }
+
+      mat-card-title,
+      mat-card-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .error {
+        padding: 16px;
+        width: 300px;
+        color: white;
+        background-color: red;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-end;
+      }
